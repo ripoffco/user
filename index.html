@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Login | SpaceTractor
+        </title>
+        <style>
+            .nav {
+                background-color: lightgray;
+                font-size: medium;
+            }
+            body {
+                background-color: lightblue;
+            }
+            p:hover {
+                color: red;
+                background-color: rgb(255, 170, 170);
+                float: left;
+            }
+        </style>
+	<!--
+		For the script, this will not have spacing
+	-->
+<script>
+function checkCodes() {
+var user = document.getElementById("userBox").value;
+var code = document.getElementById("codeBox").value;
+if (user == "guest") {
+if (code == "99067") {
+alert("You have been logged in to profile.Guest");
+window.location.href="https://spacetrcr.github.io/user/guest.html";
+} else {
+alert("Code wrong. You will be redirected to the HOME PAGE.");
+window.location.href="https://spacetrcr.github.io";
+}
+if (user == "admin") {
+if (code == "70895") {
+alert("You have been logged in to profile.Admin");
+window.location.href="https://spacetrcr.github.io/user/admin.html";
+} else {
+alert("Code wrong. You will be redirected to the HOME PAGE.");
+window.location.href="https://spacetrcr.github.io";
+}
+window.location.href="https://spacetrcr.github.io";
+}
+</script>
+    </head>
+    <body>
+        <font face="calibri">
+            <div class="nav">
+                <a href="index.html"><img src="logo.png"/></a> <a href="console.html"><img src="console.png"/></a> <a href="search.html"><img src="search.png"/></a>
+            </div>
+            <br/>
+            <br/>
+            <h1>Home</h1>
+            <p>
+                User: <input type="text" value="Check the text when you erase this." placeholder="Use: [admin | guest]" size="100" id="userBox"/><br/>
+		Code: <input type="text" placeholder="Guest code: 99067" id="codeBox" size="100"/>
+            </p>
+        </font>
+    </body>
+</html>
